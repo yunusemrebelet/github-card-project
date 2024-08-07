@@ -13,6 +13,10 @@ yarn-error.log
 
 # IDEs and editors
 .idea/
+.angular
+.firebase
+.vscode
+.firebaserc
 .project
 .classpath
 .c9/
@@ -40,3 +44,8 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json

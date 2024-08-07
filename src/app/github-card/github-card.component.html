@@ -1,0 +1,40 @@
+<div class="container mx-auto">
+  <div id="card"
+    class="card max-w-xl mx-auto my-8 p-6 bg-gray-950 text-white shadow-lg rounded-lg flex flex-col sm:flex-row relative transition-transform duration-300 ease-in-out group"
+    (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave()">
+    <div id="card-gradient"></div>
+    <div class="flex-1 p-4 text-black rounded-lg flex flex-col">
+      <div class="flex-1 p-4 text-black rounded-lg flex flex-col">
+        <h2 class="text-xl text-gray-950 font-bold relative">
+          <span class="bg-purple-100">GitHub Sponsors lets you support your</span>
+        </h2>
+        <h2 class="text-xl text-gray-950 font-bold relative">
+          <span class="bg-purple-100">favorite open source maintainers and</span>
+        </h2>
+        <h2 class="text-xl text-gray-950 font-bold relative">
+          <span class="bg-purple-100">projects.</span>
+        </h2>
+      </div>
+      <div>
+        <p class="text-gray-500 font-bold relative transition-all duration-300 cursor-pointer hover:text-gray-700">
+          Invest with GitHub Sponsors
+          <span class="ml-1 transition-transform duration-300 transform group-hover:translate-x-1">></span>
+        </p>
+      </div>
+    </div>
+    <div class="overflow-hidden">
+      <div id="sponsor-cards" class="flex-1 flex items-center justify-center p-4">
+        <div class="grid grid-cols-3 gap-4">
+          <div class="sponsor-card" *ngFor="let sponsor of sponsors">
+            <img [src]="sponsor.image" alt="{{ sponsor.name }}" class="profile-image">
+            <p class="username">{{ sponsor.name }}</p>
+            <button class="sponsor-button">
+              <i class="heart-icon"></i> Sponsor
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+  </div>
+</div>
